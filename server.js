@@ -10,7 +10,7 @@ import cldRouter from './routes/cloudinary.route.js';
 import taskRouter from './routes/task.route.js'; 
 
 const app = express();
-const PORT = process.env.PORT || 8000; 
+const PORT = process.env.PORT || 3000; 
 app.use(express.json()); 
 app.use(cookieParser()); 
 app.use(fileUpload()); 

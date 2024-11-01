@@ -1,5 +1,5 @@
 // Импортируем необходимые библиотеки для работы с хешированием и JWT
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { db } from '../lib/dbConnect.js';
 

@@ -1,5 +1,5 @@
 import { db } from '../lib/dbConnect.js';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 const collection = db.collection('users');
 import { ObjectId } from 'mongodb';
 
