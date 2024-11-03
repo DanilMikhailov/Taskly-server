@@ -30,6 +30,10 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/image', cldRouter);
 app.use('/api/v1/tasks', taskRouter);
 
+app.listen(PORT, '0.0.0.0', () => { 
+    console.log(`Сервер слушает на порту ${PORT}`); 
+}); 
+
 // Обработчик ошибок
 app.use(errorHandler);
 
@@ -42,7 +46,5 @@ app.use('*', (req, res) => {
     res.status(404).json({ message: 'Not found' });
 });
 
-app.listen(PORT, '0.0.0.0', () => { 
-    console.log(`Сервер слушает на порту ${PORT}`); 
-}); 
+
 
