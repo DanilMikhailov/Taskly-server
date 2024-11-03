@@ -16,9 +16,8 @@ app.use(cookieParser());
 app.use(fileUpload()); 
 
 app.use(cors({
-    origin: process.env.PORT,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Укажите методы, которые вы хотите разрешить
-    credentials: true, // Если нужно отправлять куки
+    origin: process.env.CLIENT_URL,
+    credentials: true,
 }));
 
 // Middleware для обработки JSON и cookies
