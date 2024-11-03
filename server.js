@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 
 // Обработчик для всех несуществующих маршрутов
 app.use('*', (req, res) => {
-    res.status(404).json({ message: 'Not found' });
+    res.status(404).json({ message: 'Not found111' });
 });
 
 
