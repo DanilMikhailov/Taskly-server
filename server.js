@@ -21,18 +21,18 @@ app.use(cors({
 }));
 
 // Роуты
-app.use('/api/v1/auth', authRouter);
-app.use('/api/v1/users', userRouter);
-app.use('/api/v1/image', cldRouter);
-app.use('/api/v1/tasks', taskRouter);
+app.use('api/v1/auth', authRouter);
+app.use('api/v1/users', userRouter);
+app.use('api/v1/image', cldRouter);
+app.use('api/v1/tasks', taskRouter);
 
 // Обработчик ошибок
 app.use(errorHandler);
 
 // Обработчик для всех несуществующих маршрутов
-//app.use('*', (req, res) => {
-//    res.status(404).json({ message: 'Not found111' });
-//});
+app.use('*', (req, res) => {
+    res.status(404).json({ message: 'Not found111' });
+});
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Сервер слушает на порту ${PORT}`);
