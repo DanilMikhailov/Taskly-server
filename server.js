@@ -21,10 +21,10 @@ app.use(cors({
 }));
 
 // Роуты
-app.use('/auth', authRouter);
-app.use('api/v1/users', userRouter);
-app.use('api/v1/image', cldRouter);
-app.use('api/v1/tasks', taskRouter);
+app.use('/api/v1/auth', authRouter);
+app.use('/api/v1/users', userRouter);
+app.use('/api/v1/image', cldRouter);
+app.use('/api/v1/tasks', taskRouter);
 
 // Обработчик ошибок
 app.use(errorHandler);
