@@ -29,6 +29,10 @@ app.use('/api/v1/tasks', taskRouter);
 // Обработчик ошибок
 app.use(errorHandler);
 
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'Welcome to Taskly API' });
+});
+
 // Обработчик для всех несуществующих маршрутов
 app.use('*', (req, res) => {
     res.status(404).json({ message: 'Not found111' });
